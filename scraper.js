@@ -7,11 +7,15 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
 const myPhoneNumber = process.env.MY_PHONE_NUMBER;
 
-const client = require('twilio')(accountSid, authToken);
-
+/// PRODUCT INFORMATION
+const desiredPrice = 8000;
 const url =
     `https://www.amazon.com.br/Notebook-Legion-R7-5800H-RTX3050-82QJ0000BR/dp/B09PZGR4MR/ref=sr_1_51?` +
     `__mk_pt_BR=ÅMÅŽÕÑ&crid=6F3TPYLDRV93&keywords=notebook&qid=1658101968&sprefix=notebook%2Caps%2C233&sr=8-51&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147`;
+////////////////////////////////////////////////////////////////
+
+const client = require('twilio')(accountSid, authToken);
+
 
 
 const handle = setInterval(scrape, 100000);
@@ -34,7 +38,7 @@ async function scrape() {
     const priceNum = parseFloat(price);
     product.price = priceNum;
 
-    if (priceNum < 8000) {
+    if (priceNum < desiredPrice) {
         client.messages.create({
             body: `Price of ${product.name} just went to ${price}. Get it on ${product.link}`,
             from: twilioPhoneNumber,
