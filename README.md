@@ -1,6 +1,9 @@
 ## Description
 
-WebScraper to check if the price of the chosen product is below the desired price
+WebScraper to check if the price of the chosen product is below the desired price.
+When the price is below the desired price, a SMS will be sent to your phone with the product information, then the application will be stopped.
+
+Main Technologies: [NodeJS](https://nodejs.dev) and [Cheerio](https://cheerio.js.org) to get website data, and [Twilio](https://www.twilio.com/pt-br/) as SMS service
 
 ## Installation
 
