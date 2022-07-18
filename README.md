@@ -15,7 +15,7 @@ $ npm install
 ```bash
 $ cp .env.example .env
 ```
-Set your [Twilio](https://www.twilio.com/pt-br/) information in `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` and `TWILIO_PHONE_NUMBER`
+Set your [Twilio](https://www.twilio.com/pt-br/) information in `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` and `TWILIO_PHONE_NUMBER` <br>
 Set your phone number at `MY_PHONE_NUMBER`
 
 
